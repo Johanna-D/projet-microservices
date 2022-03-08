@@ -5,30 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54dd3510-ffc9-44bf-8e02-c9eb8c5ca70b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/course/client/CartBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/course/client/CartItemBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/course/client/ClientApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/course/client/ClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/course/client/MsCartProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/course/client/MsProductProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/course/client/ProductBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/test/java/com/course/client/ClientApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +116,8 @@
       <updated>1646645138011</updated>
       <workItem from="1646645140147" duration="1279000" />
       <workItem from="1646649761162" duration="1121000" />
-      <workItem from="1646650984730" duration="457000" />
+      <workItem from="1646650984730" duration="1297000" />
+      <workItem from="1646727141517" duration="1142000" />
     </task>
     <servers />
   </component>
