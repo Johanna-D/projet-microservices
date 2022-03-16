@@ -11,6 +11,7 @@
         <div th:each="product : ${products}" class="col-md-4 my-1">
             <a th:href="@{|/product-detail/${product.id}|}" >
                 <img th:src="${product.illustration}" class="card-img-top" />
+
                 <p th:text= "${product.name}"></p>
             </a>
         </div>

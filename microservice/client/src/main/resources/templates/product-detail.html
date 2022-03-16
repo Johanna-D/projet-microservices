@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Microservice Client</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css} "/>
+</head>
+<body>
+<div class="container">
+    <h1 th:text= "${product.name}"></h1>
+    <div class="row">
+        <form  th:action="@{/product-detail}"
+               th:object="${product}" method="POST">
+        <div class="col-md-4 my-1">
+                <img th:src="${product.illustration}" class="card-img-top" />
+                <p th:text= "'Description du produit :' + ${product.description}"></p>
+                <p th:text= "'Prix : '${product.price} +' €'"></p>
+                <input type="submit" value="Ajouter au panier" />
+        </div>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>

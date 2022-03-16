@@ -7,10 +7,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.List;
 import java.util.Optional;
 
 @FeignClient(name = "ms-cart", url = "localhost:8092")
 public interface MsCartProxy {
+    @GetMapping(value = "/cart")
+    public List<CartBean> list();
     @PostMapping(value = "/cart")
     public ResponseEntity<CartBean> createNewCart(@RequestBody CartBean cartData);
     @GetMapping(value = "/cart/{id}")

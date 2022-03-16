@@ -32,7 +32,18 @@ public class Cart {
     public void setProducts(List<CartItem> products) {
         this.products = products;
     }
-    public void addProduct(CartItem product){
-        this.products.add(product);
+    public void addProduct(CartItem item){
+        if(id != null) { // si le panier n'existe pas
+
+        }
+        for( CartItem c: this.products){
+            if(item.getId()==getId()){
+                c.setQuantity(c.getQuantity()+1);
+            }
+            else{
+                this.products.add(item);
+            }
+        }
+
     }
 }
