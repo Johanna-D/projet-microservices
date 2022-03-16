@@ -33,17 +33,18 @@ public class Cart {
         this.products = products;
     }
     public void addProduct(CartItem item){
-        if(id != null) { // si le panier n'existe pas
+        Boolean isItemExisting = false;
 
-        }
         for( CartItem c: this.products){
-            if(item.getId()==getId()){
-                c.setQuantity(c.getQuantity()+1);
-            }
-            else{
-                this.products.add(item);
+            if(item.getProductId()==c.getProductId()){
+                isItemExisting = true;
+                c.setQuantity(c.getQuantity()+ item.getQuantity());
             }
         }
+        if (!isItemExisting){
+            this.products.add(item);
+        }
+
 
     }
 }

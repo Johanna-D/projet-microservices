@@ -4,33 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54dd3510-ffc9-44bf-8e02-c9eb8c5ca70b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/templates/product-detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/course/order/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/course/order/OrderApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/course/order/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/course/order/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/course/order/OrderItemRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/course/order/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/test/java/com/course/order/OrderApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/java/com/example/cart/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cart/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/course/client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/course/client/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/course/client/MsCartProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/course/client/MsCartProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="54dd3510-ffc9-44bf-8e02-c9eb8c5ca70b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +29,12 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="product" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -83,7 +62,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/order/build.gradle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cart/build.gradle" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -135,8 +118,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ProductApplication" />
         <item itemvalue="Spring Boot.CartApplication" />
+        <item itemvalue="Spring Boot.ProductApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -155,6 +138,7 @@
       <workItem from="1647248476370" duration="1507000" />
       <workItem from="1647250102501" duration="1900000" />
       <workItem from="1647436281390" duration="2385000" />
+      <workItem from="1647450206236" duration="11305000" />
     </task>
     <servers />
   </component>

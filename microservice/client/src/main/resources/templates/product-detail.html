@@ -5,18 +5,38 @@
     <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css} "/>
 </head>
 <body>
+
+<script>
+    function ajouterPanier(id){
+
+        let panierId = sessionStorage.getItem("panierId");
+
+        url = "/product-detail/"+id+"/"+panierId;
+        fetch(url, {method:"POST"}) // récupérer/envoyer des ressources via une API
+            .then((responseJSON) => { // réponse du controller
+                // arrow functions, conserve le bon "this"
+                // la réponse est en JSON, on la convertit avec la ligne suivante
+                responseJSON.json().then((resJS) => {
+                    console.log(resJS);
+                    sessionStorage.setItem("panierId",resJS.id);
+
+                });
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+    }
+</script>
+
 <div class="container">
     <h1 th:text= "${product.name}"></h1>
     <div class="row">
-        <form  th:action="@{/product-detail}"
-               th:object="${product}" method="POST">
         <div class="col-md-4 my-1">
-                <img th:src="${product.illustration}" class="card-img-top" />
-                <p th:text= "'Description du produit :' + ${product.description}"></p>
-                <p th:text= "'Prix : '${product.price} +' €'"></p>
-                <input type="submit" value="Ajouter au panier" />
+            <img th:src="${product.illustration}" class="card-img-top" />
+            <p th:text= "'Description du produit :' + ${product.description}"></p>
+            <p th:text= "'Prix : ' + ${product.price} +' €'"></p>
+                <input th:onclick="|javascript:ajouterPanier(${product.id})|" type="submit" value="Ajouter au panier" />
         </div>
-        </form>
 
     </div>
 </div>
