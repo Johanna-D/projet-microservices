@@ -1,25 +1,20 @@
-package com.course.order;
+package com.course.client;
 
-import javax.persistence.*;
-
-@Entity(name="MyOrder")
-public class Order {
-    @Id
-    @GeneratedValue
+public class OrderBean {
     private Long id;
     private Long cartId;
     private double price;
 
-    public Order(){}
-
-    public Order(Long id, Long cartId, double price) {
+    public OrderBean(Long id, Long cartId, double price) {
         this.id = id;
         this.cartId = cartId;
         this.price = price;
     }
+    public OrderBean(){}
 
-    public Order(Long cartId) {
+    public OrderBean(Long cartId, double price){
         this.cartId = cartId;
+        this.price = price;
     }
 
     public Long getId() {
@@ -48,12 +43,10 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
+        return "OrderBean{" +
                 "id=" + id +
                 ", cartId=" + cartId +
                 ", price=" + price +
                 '}';
     }
-
-
 }

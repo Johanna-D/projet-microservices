@@ -9,8 +9,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class ClientController {
@@ -19,6 +21,9 @@ public class ClientController {
 
     @Autowired
     private MsCartProxy msCartProxy;
+
+    @Autowired
+    private MsOrderProxy msOrderProxy;
 
     Long currentCartId;
 
@@ -80,9 +85,38 @@ public class ClientController {
     public String order(Model model,  @PathVariable String panierId) {
         Long panierIdLong = Long.parseLong(panierId);
         CartBean cart = msCartProxy.getCart(panierIdLong).get();
-        model.addAttribute("cart",cart);
-        List<CartItemBean> items = cart.getProducts();
-        model.addAttribute("cartItems", items);
+
+        // créer une variable prixTotal
+        // boucle sur le panier, pour chaque produit dans le panier on récupere son prix
+        // et on fait prixTotal += prixProduit
+
+        double totalPrice = 0.0;
+        List<CartItemBean> items = cart.getProducts(); // produits dans le panier
+        List<Double> prices = new ArrayList<>();
+        List<OrderItemBean> orderItems = new ArrayList<>();
+        for(CartItemBean item : items){
+            Long itemID = item.getProductId();
+            Optional<ProductBean>  product = msProductProxy.get(itemID);
+            double productPrice = product.get().getPrice();
+            prices.add(productPrice); // pour avoir la liste des prix
+
+            OrderItemBean orderItemBean = new OrderItemBean(itemID,item.getQuantity(),productPrice);
+            orderItems.add(orderItemBean);
+            totalPrice += productPrice * item.getQuantity();
+        }
+
+        // créer un order qui prend cartID et le prixTotal
+        // afficher sur la page les produits du cart avec leur prixProduit
+        // afficher le prix total
+        // supprimer le cart
+
+        OrderBean orderData = new OrderBean(panierIdLong,totalPrice);
+        msOrderProxy.createNewOrder(orderData);
+
+        model.addAttribute("myorder",orderData);
+        model.addAttribute("orderItems", orderItems);
+
+
         return "order";
     }
 

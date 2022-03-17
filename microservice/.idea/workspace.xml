@@ -46,6 +46,7 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -152,7 +153,7 @@
       <workItem from="1647450206236" duration="11420000" />
       <workItem from="1647467320983" duration="4212000" />
       <workItem from="1647471673648" duration="4367000" />
-      <workItem from="1647526991461" duration="8204000" />
+      <workItem from="1647526991461" duration="12657000" />
     </task>
     <servers />
   </component>
@@ -169,16 +170,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/com/course/client/ClientController.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
