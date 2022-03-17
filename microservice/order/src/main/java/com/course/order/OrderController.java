@@ -33,6 +33,15 @@ public class OrderController {
         return order;
     }
 
+    @PostMapping(value = "/order/{id}")
+    public Optional<Order> showOrder(@PathVariable Long id)
+    {
+        Optional<Order> order = orderRepository.findById(id);
+        if (!order.isPresent())
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Couldn't get order");
+        return order;
+    }
+
 
 
 }

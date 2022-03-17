@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Commande</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Contenu de la commande</h1>
+    <div th:each="item : ${cartItems}" class="col-md-4 my-1">
+        <p th:text= "'ID du produit : ' + ${item.productId} + ', Quantité : ' + ${item.quantity}"></p>
+    </div>
+
+</div>
+</body>
+</html>

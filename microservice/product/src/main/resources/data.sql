@@ -1,10 +1,17 @@
 INSERT INTO product(id,name, description, illustration, price)
-values (0, 'Produit0', 'description produit 0','https://images.squarespace-cdn.com/content/v1/576c0682f5e231d654cf661c/1528449391201-4OIJK4NQYFQTD8Y102W2/shopping-cart.png',9.9),
-       (1, 'Produit1', 'description produit 1','https://images.squarespace-cdn.com/content/v1/576c0682f5e231d654cf661c/1528449391201-4OIJK4NQYFQTD8Y102W2/shopping-cart.png',9.9),
-       (2, 'Produit2', 'description produit 2','https://images.squarespace-cdn.com/content/v1/576c0682f5e231d654cf661c/1528449391201-4OIJK4NQYFQTD8Y102W2/shopping-cart.png',9.9),
-       (3, 'Produit3', 'description produit 3','https://images.squarespace-cdn.com/content/v1/576c0682f5e231d654cf661c/1528449391201-4OIJK4NQYFQTD8Y102W2/shopping-cart.png',9.9),
-       (4, 'Produit4', 'description produit 4','https://images.squarespace-cdn.com/content/v1/576c0682f5e231d654cf661c/1528449391201-4OIJK4NQYFQTD8Y102W2/shopping-cart.png',9.9),
-       (5, 'Produit5', 'description produit 5','https://images.squarespace-cdn.com/content/v1/576c0682f5e231d654cf661c/1528449391201-4OIJK4NQYFQTD8Y102W2/shopping-cart.png',9.9),
-       (6, 'Produit6', 'description produit 6','https://images.squarespace-cdn.com/content/v1/576c0682f5e231d654cf661c/1528449391201-4OIJK4NQYFQTD8Y102W2/shopping-cart.png',9.9),
-       (7, 'Produit7', 'description produit 7','https://images.squarespace-cdn.com/content/v1/576c0682f5e231d654cf661c/1528449391201-4OIJK4NQYFQTD8Y102W2/shopping-cart.png',9.9),
-       (8, 'Produit8', 'description produit 8','https://images.squarespace-cdn.com/content/v1/576c0682f5e231d654cf661c/1528449391201-4OIJK4NQYFQTD8Y102W2/shopping-cart.png',9.9);
+values (0, 'Eau Roi Roitschocrene', 'Eau extraite d une source ancienne de 8000ans, en Slovénie. Son énorme contenu minéral apporte un goût distinctif, riche et volumineux à la table.','https://minuteluxe.com/wp-content/uploads/2021/02/unnamed-2-2.jpg',9.9),
+       (1, 'Lofoten Water', 'Eau provenant des majestueuses montagnes des îles Lofoten.Non filtrée. ','https://minuteluxe.com/wp-content/uploads/2021/02/unnamed-3-2.jpg',16.5),
+       (2, 'Eau Svalbardi', 'Eau extraite des glaciers de Svalbard. Chaque glacier est sélectionné minutieusement, au terme de jours entiers de recherche. Eau au goût frais de la neige. (Oui, le prix est pour la bouteille seule) ','https://minuteluxe.com/wp-content/uploads/2021/02/1bottle-1000_1024x1024-e1613933622585.jpg',84.95),
+       (3, 'Eau Aqua Deco', 'Eau provenant du Canada. (Au moins à ce prix, vous récuperez un sublime flacon)','https://www.pineo.cat/wp-content/uploads/Aqua-Deco.jpg',12),
+       (4, 'Eau BlingH20', 'Eau provenant des Etats-Unis. Filtrée 9 fois avant mise en bouteille. (Nous ne préférons pas savoir d ou elle provient...)','https://www.pineo.cat/wp-content/uploads/BlingH20.jpg',40),
+       (5, 'Eau Tasmanian Rain', 'Eau de pluie australienne. (Nous commençons sérieusement à penser à une reconversion)','https://www.pineo.cat/wp-content/uploads/Tasmanian-Rain2.jpg',5),
+       (6, 'Eau Voss', 'Eau artésienne de Norvège dépourvue de minéraux. ','https://www.lagrandeepicerie.com/on/demandware.static/-/Sites-lge-master-catalog/default/dwc1563cb8/images/DIS/682430611737_1.jpg',2.8);
+
+--
+-- values (0, 'Eau Roi Roitschocrene', 'Eau extraite d une source ancienne de 8000ans, en Slovénie, la source aurait plus de 8000 ans. D après la mythologie, en suivant les instructions d Apollon, le cheval ailé Pegasus aurait heurté le sol avec son sabot à Rogaška, en Slovénie, et c est ainsi que la source s ouvra. Son énorme contenu minéral apporte un goût distinctif, riche et volumineux à la table.','https://minuteluxe.com/wp-content/uploads/2021/02/unnamed-2-2.jpg',25),
+--        (1, 'Lofoten Water', 'Eau provenant des majestueuses montagnes des îles Lofoten.Non filtrée. ','https://minuteluxe.com/wp-content/uploads/2021/02/unnamed-3-2.jpg',16.5),
+--        (2, 'Eau Svalbardi', 'Eau extraite des glaciers de Svalbard. Chaque glacier est sélectionné minutieusement, au terme de jours entiers de recherche. Eau au goût frais de la neige. (Oui, le prix est pour la bouteille seule) ','https://minuteluxe.com/wp-content/uploads/2021/02/1bottle-1000_1024x1024-e1613933622585.jpg',84.95),
+--        (3, 'Eau Aqua Deco', 'Eau provenant du Canada. (Au moins à ce prix, vous récuperez un sublime flacon)','https://www.pineo.cat/wp-content/uploads/Aqua-Deco.jpg',12),
+--        (4, 'Eau BlingH20', 'Eau provenant des Etats-Unis. Filtrée 9 fois avant mise en bouteille. (Nous ne préférons pas savoir d ou elle provient...)','https://www.pineo.cat/wp-content/uploads/BlingH20.jpg',40),
+--        (5, 'Eau Tasmanian Rain', 'Eau de pluie australienne. (Nous commençons sérieusement à penser à une reconversion)','https://www.pineo.cat/wp-content/uploads/Tasmanian-Rain2.jpg',5),
+--        (6, 'Eau Voss', 'Eau artésienne de Norvège dépourvue de minéraux. ','https://www.lagrandeepicerie.com/on/demandware.static/-/Sites-lge-master-catalog/default/dwc1563cb8/images/DIS/682430611737_1.jpg',2.8),

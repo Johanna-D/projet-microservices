@@ -18,6 +18,10 @@ public class Order {
         this.price = price;
     }
 
+    public Order(Long cartId) {
+        this.cartId = cartId;
+    }
+
     public Long getId() {
         return id;
     }

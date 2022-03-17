@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Panier</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Panier</h1>
+    <div th:each="item : ${cartItems}" class="col-md-4 my-1">
+        <p th:text= "'ID du produit : ' + ${item.productId} + ', Quantité : ' + ${item.quantity}"></p>
+    </div>
+
+    <a th:href="@{|/order/${cart.id}|}" >Passer commande</a>
+</div>
+</body>
+</html>

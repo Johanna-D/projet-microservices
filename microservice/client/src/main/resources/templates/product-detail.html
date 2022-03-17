@@ -25,6 +25,7 @@
             .catch(function (err) {
                 console.log(err);
             });
+        alert("Article ajouté au panier");
     }
 </script>
 
@@ -32,8 +33,8 @@
     <h1 th:text= "${product.name}"></h1>
     <div class="row">
         <div class="col-md-4 my-1">
-            <img th:src="${product.illustration}" class="card-img-top" />
-            <p th:text= "'Description du produit :' + ${product.description}"></p>
+            <img th:src="${product.illustration}" class="card-img-top" style="width:400px" />
+            <p th:text= "'Description du produit : ' + ${product.description}"></p>
             <p th:text= "'Prix : ' + ${product.price} +' €'"></p>
                 <input th:onclick="|javascript:ajouterPanier(${product.id})|" type="submit" value="Ajouter au panier" />
         </div>

@@ -41,6 +41,14 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -54,10 +62,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -118,8 +129,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.CartApplication" />
         <item itemvalue="Spring Boot.ProductApplication" />
+        <item itemvalue="Spring Boot.CartApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -138,7 +149,10 @@
       <workItem from="1647248476370" duration="1507000" />
       <workItem from="1647250102501" duration="1900000" />
       <workItem from="1647436281390" duration="2385000" />
-      <workItem from="1647450206236" duration="11305000" />
+      <workItem from="1647450206236" duration="11420000" />
+      <workItem from="1647467320983" duration="4212000" />
+      <workItem from="1647471673648" duration="4367000" />
+      <workItem from="1647526991461" duration="8204000" />
     </task>
     <servers />
   </component>
@@ -155,5 +169,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client/src/main/java/com/course/client/ClientController.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

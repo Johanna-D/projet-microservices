@@ -5,17 +5,46 @@
     <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css} "/>
 </head>
 <body>
+
+
+<div id="navigation" ></div>
 <div class="container">
-    <h1>Microservice Client eCommerce</h1>
+    <h1>Eaux de luxe</h1>
     <div class="row">
         <div th:each="product : ${products}" class="col-md-4 my-1">
             <a th:href="@{|/product-detail/${product.id}|}" >
-                <img th:src="${product.illustration}" class="card-img-top" />
+                <img th:src="${product.illustration}" class="card-img-top" style="width:400px"/>
 
                 <p th:text= "${product.name}"></p>
             </a>
         </div>
     </div>
 </div>
+
+<script>
+    // Forcer le reload de la page quand on revient en arrière
+    window.addEventListener( "pageshow", function ( event ) {
+        var historyTraversal = event.persisted ||
+            ( typeof window.performance != "undefined" &&
+                window.performance.navigation.type === 2 );
+        if ( historyTraversal ) {
+            // Handle page restore.
+            window.location.reload();
+        }
+    });
+    let navigation = document.getElementById('navigation');
+
+    let panierId = sessionStorage.getItem("panierId");
+
+    if (panierId == null){
+        navigation.innerHTML = "<p>Panier vide</p>";
+    }
+    else{
+        let reference = '/cart/' + panierId ;
+
+        navigation.innerHTML = "<a href=" + reference + "  >Panier</a>";
+    }
+
+</script>
 </body>
 </html>
