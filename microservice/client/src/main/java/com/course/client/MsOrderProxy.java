@@ -13,8 +13,14 @@ import java.util.Optional;
 @FeignClient(name = "ms-order", url = "localhost:8093")
 public interface MsOrderProxy {
 
+    @GetMapping(value = "/orderItems")
+    public List<OrderItemBean> list();
+
     @PostMapping(value = "/order")
     public ResponseEntity<CartBean> createNewOrder(@RequestBody OrderBean orderData);
+
+    @GetMapping(value = "/order/search")
+    public List<OrderBean> searchOrder();
 
     @GetMapping(value = "/order/{id}")
     public Optional<CartBean> getOrder(@PathVariable Long id);

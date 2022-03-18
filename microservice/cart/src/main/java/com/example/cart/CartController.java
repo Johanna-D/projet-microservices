@@ -45,5 +45,11 @@ public class CartController {
         return new ResponseEntity<Cart>(cart, HttpStatus.CREATED);
     }
 
+    @PostMapping(value = "/cart/delete/{id}")
+    public void deleteCart(@PathVariable Long id){
+        Cart cart = cartRepository.getById(id);
+        cartRepository.delete(cart);
+    }
+
 
 }

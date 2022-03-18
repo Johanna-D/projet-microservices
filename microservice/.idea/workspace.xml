@@ -47,6 +47,7 @@
         <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -75,10 +76,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/cart/build.gradle" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\delac\Bureau\M2 MIAGE\BDD\projet-microservices\microservice\client\src\main\resources\static" />
+      <recent name="C:\Users\delac\Bureau\M2 MIAGE\BDD\projet-microservices\microservice\client\src\main\resources\css" />
+      <recent name="C:\Users\delac\Bureau\M2 MIAGE\BDD\projet-microservices\microservice\client\src\main\resources" />
+      <recent name="C:\Users\delac\Bureau\M2 MIAGE\BDD\projet-microservices\microservice\client\src\main\resources\static\css" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -153,7 +163,7 @@
       <workItem from="1647450206236" duration="11420000" />
       <workItem from="1647467320983" duration="4212000" />
       <workItem from="1647471673648" duration="4367000" />
-      <workItem from="1647526991461" duration="12657000" />
+      <workItem from="1647526991461" duration="29306000" />
     </task>
     <servers />
   </component>
@@ -170,5 +180,36 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client/src/main/java/com/course/client/ClientController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client/src/main/java/com/course/client/ClientController.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client/src/main/java/com/course/client/ClientController.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order/src/main/java/com/course/order/OrderController.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order/src/main/java/com/course/order/OrderController.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

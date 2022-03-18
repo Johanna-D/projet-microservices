@@ -1,5 +1,6 @@
 package com.course.client;
 
+import org.hibernate.criterion.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,6 +33,20 @@ public class ClientController {
         List<ProductBean> products = msProductProxy.list();
         model.addAttribute("products", products);
         return "index";
+    }
+
+    @RequestMapping("/order")
+    public String orderPage(Model model) {
+//        List<OrderBean> orderBeans = msOrderProxy.searchOrder();
+//        OrderBean orderBean = null;
+//        for (OrderBean order : orderBeans){
+//            orderBean = order;
+//        }
+        List<OrderItemBean> orderItems = msOrderProxy.list();
+
+//        model.addAttribute("myorder",orderBean);
+        model.addAttribute("orderItems",orderItems);
+        return "order";
     }
 
 
@@ -115,6 +130,8 @@ public class ClientController {
 
         model.addAttribute("myorder",orderData);
         model.addAttribute("orderItems", orderItems);
+
+        msCartProxy.deleteCart(panierIdLong);
 
 
         return "order";

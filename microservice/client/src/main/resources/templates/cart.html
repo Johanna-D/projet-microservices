@@ -3,16 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Panier</title>
+    <style th:inline="css">
+        html{
+            background: linear-gradient(to bottom right, cadetblue, aquamarine);
+            height:100%;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: xx-large;
+            font-family: "Times New Roman";
+        }
+        #row {
+            width: 60%;
+            margin: 0 auto ;
+            background-color: lightcyan;
+            border-radius: 30px;
+            padding : 5%;
+        }
+        #valider{
+            width : 25%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+<script>
+    function supprimerPanier(){
+        console.log("I am here");
+        sessionStorage.clear();
+
+    }
+</script>
 
 <div class="container">
     <h1>Panier</h1>
-    <div th:each="item : ${cartItems}" class="col-md-4 my-1">
+    <div id="row">
+    <div th:each="item : ${cartItems}" id="product">
         <p th:text= "'ID du produit : ' + ${item.productId} + ', Quantité : ' + ${item.quantity}"></p>
     </div>
-
-    <a th:href="@{|/order/${cart.id}|}" >Passer commande</a>
+    <div id="valider">
+    <a  th:onclick="|javascript:supprimerPanier()|" th:href="@{|/order/${cart.id}|}"  >Passer commande</a>
+    </div>
+    </div>
 </div>
+
+
+
+
+
 </body>
 </html>

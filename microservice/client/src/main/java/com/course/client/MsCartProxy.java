@@ -23,4 +23,8 @@ public interface MsCartProxy {
 
     @PostMapping(value = "/cart/{id}")
     public ResponseEntity<CartBean> addProductToCart(@PathVariable Long id, @RequestBody CartItemBean cartItem); // CartBean est un copie colle de Cart du microservice Cart
+
+    @PostMapping(value = "/cart/delete/{id}")
+    public void deleteCart(@PathVariable Long id);
+
 }

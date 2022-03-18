@@ -7,6 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -32,15 +34,30 @@ public class OrderController {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Couldn't get order");
         return order;
     }
-
-    @PostMapping(value = "/order/{id}")
-    public Optional<Order> showOrder(@PathVariable Long id)
+//
+//    @PostMapping(value = "/order/{id}")
+//    public Optional<Order> showOrder(@PathVariable Long id)
+//    {
+//        Optional<Order> order = orderRepository.findById(id);
+//        if (!order.isPresent())
+//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Couldn't get order");
+//        return order;
+//    }
+    @GetMapping(value = "/order/search")
+    public List<Order> searchOrder()
     {
-        Optional<Order> order = orderRepository.findById(id);
-        if (!order.isPresent())
+        List<Order> order = orderRepository.findAll();
+        if (order.isEmpty())
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Couldn't get order");
         return order;
     }
+
+    @GetMapping(value = "/orderItems")
+    public List<OrderItem> list() {
+        List<OrderItem> orderItemList = orderItemRepository.findAll();
+        return orderItemList;
+    }
+
 
 
 

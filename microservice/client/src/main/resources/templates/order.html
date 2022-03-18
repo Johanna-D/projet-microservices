@@ -3,15 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Commande</title>
+    <style th:inline="css">
+        html{
+            background: linear-gradient(to bottom right, cadetblue, aquamarine);
+            height:100%;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: xx-large;
+            font-family: "Times New Roman";
+        }
+        #row {
+            width: 60%;
+            margin: 0 auto ;
+            background-color: lightcyan;
+            border-radius: 30px;
+            padding : 5%;
+        }
+        #prix{
+            width : 25%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
 <div class="container">
     <h1>Contenu de la commande</h1>
-    <div th:each="item : ${orderItems}" class="col-md-4 my-1">
+    <div id="row">
+    <div th:each="item : ${orderItems}" id="product">
         <p th:text= "'ID du produit : ' + ${item.id} + ', Quantité : ' + ${item.quantity} + ', Prix unitaire : ' + ${item.price} "></p>
     </div>
-    <p th:text= "'Prix total : ' + ${myorder.price}" ></p>
+    <div id="prix">
+    <p th:text= "'Prix total : ' + ${myorder.price} + ' €'"  ></p>
+    </div>
+    </div>
 
 </div>
 </body>
