@@ -163,7 +163,8 @@
       <workItem from="1647450206236" duration="11420000" />
       <workItem from="1647467320983" duration="4212000" />
       <workItem from="1647471673648" duration="4367000" />
-      <workItem from="1647526991461" duration="29306000" />
+      <workItem from="1647526991461" duration="29884000" />
+      <workItem from="1647612783225" duration="4641000" />
     </task>
     <servers />
   </component>
@@ -186,16 +187,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client/src/main/java/com/course/client/ClientController.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/com/course/client/ClientController.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/com/course/client/ClientController.java</url>
           <line>44</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
@@ -208,6 +199,11 @@
           <url>file://$PROJECT_DIR$/order/src/main/java/com/course/order/OrderController.java</url>
           <line>57</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order/src/main/java/com/course/order/OrderController.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

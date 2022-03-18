@@ -21,7 +21,7 @@ public class OrderController {
     @PostMapping(value = "/order")
     public ResponseEntity<Order> createNewOrder(@RequestBody Order orderData)
     {
-        Order order = orderRepository.save(new Order());
+        Order order = orderRepository.save(orderData);
         if (order == null)
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Couldn't create a new order");
         return new ResponseEntity<Order>(order, HttpStatus.CREATED);

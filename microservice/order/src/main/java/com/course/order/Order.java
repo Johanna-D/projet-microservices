@@ -1,6 +1,7 @@
 package com.course.order;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity(name="MyOrder")
 public class Order {
@@ -9,13 +10,30 @@ public class Order {
     private Long id;
     private Long cartId;
     private double price;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<OrderItem> orderItems;
 
     public Order(){}
+
+    public Order(Long id, Long cartId, double price, List<OrderItem> orderItems) {
+        this.id = id;
+        this.cartId = cartId;
+        this.price = price;
+        this.orderItems = orderItems;
+    }
 
     public Order(Long id, Long cartId, double price) {
         this.id = id;
         this.cartId = cartId;
         this.price = price;
+    }
+
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
+    }
+
+    public void setOrderItems(List<OrderItem> orderItems) {
+        this.orderItems = orderItems;
     }
 
     public Order(Long cartId) {
@@ -52,6 +70,7 @@ public class Order {
                 "id=" + id +
                 ", cartId=" + cartId +
                 ", price=" + price +
+                ", orderItems=" + orderItems +
                 '}';
     }
 

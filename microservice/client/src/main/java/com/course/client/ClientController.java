@@ -37,15 +37,15 @@ public class ClientController {
 
     @RequestMapping("/order")
     public String orderPage(Model model) {
-//        List<OrderBean> orderBeans = msOrderProxy.searchOrder();
-//        OrderBean orderBean = null;
-//        for (OrderBean order : orderBeans){
-//            orderBean = order;
-//        }
-        List<OrderItemBean> orderItems = msOrderProxy.list();
+        List<OrderBean> orderBeans = msOrderProxy.searchOrder();
+        OrderBean orderBean = null;
+        for (OrderBean order : orderBeans){
+            orderBean = order;
+        }
+//        List<OrderItemBean> orderItems = msOrderProxy.list();
 
-//        model.addAttribute("myorder",orderBean);
-        model.addAttribute("orderItems",orderItems);
+        model.addAttribute("myorder",orderBean);
+//        model.addAttribute("orderItems",orderItems);
         return "order";
     }
 
@@ -99,7 +99,13 @@ public class ClientController {
     @RequestMapping("/order/{panierId}")
     public String order(Model model,  @PathVariable String panierId) {
         Long panierIdLong = Long.parseLong(panierId);
-        CartBean cart = msCartProxy.getCart(panierIdLong).get();
+        CartBean cart = new CartBean();
+        try{
+            cart = msCartProxy.getCart(panierIdLong).get();
+        }catch(Exception e){
+            model.addAttribute("myorder",new OrderBean());
+            return "order";
+        }
 
         // créer une variable prixTotal
         // boucle sur le panier, pour chaque produit dans le panier on récupere son prix
@@ -125,11 +131,11 @@ public class ClientController {
         // afficher le prix total
         // supprimer le cart
 
-        OrderBean orderData = new OrderBean(panierIdLong,totalPrice);
+        OrderBean orderData = new OrderBean(panierIdLong,totalPrice,orderItems);
         msOrderProxy.createNewOrder(orderData);
 
         model.addAttribute("myorder",orderData);
-        model.addAttribute("orderItems", orderItems);
+//        model.addAttribute("orderItems", orderItems);
 
         msCartProxy.deleteCart(panierIdLong);
 

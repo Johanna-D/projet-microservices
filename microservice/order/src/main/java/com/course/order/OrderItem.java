@@ -8,15 +8,33 @@ public class OrderItem {
     @Id
     @GeneratedValue
     private Long id;
+    private Long productId;
     private int quantity;
     private double price;
 
     public OrderItem(){}
 
-    public OrderItem(Long id, int quantity, double price) {
+    public OrderItem(Long id, Long productId, int quantity, double price) {
         this.id = id;
+        this.productId = productId;
         this.quantity = quantity;
         this.price = price;
+    }
+
+    public OrderItem(Long productId, int quantity, double price) {
+        this.productId = productId;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
+
+
+    public Long getProductId() {
+        return productId;
+    }
+
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
     public Long getId() {
@@ -47,9 +65,11 @@ public class OrderItem {
     public String toString() {
         return "OrderItem{" +
                 "id=" + id +
+                ", productId=" + productId +
                 ", quantity=" + quantity +
                 ", price=" + price +
                 '}';
     }
+
 }
 

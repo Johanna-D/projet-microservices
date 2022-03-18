@@ -2,15 +2,31 @@ package com.course.client;
 
 public class OrderItemBean {
     private Long id;
+    private Long productId;
     private int quantity;
     private double price;
 
-    public OrderItemBean(Long id, int quantity, double price) {
+    public OrderItemBean(Long id, Long productId, int quantity, double price) {
         this.id = id;
+        this.productId = productId;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
+    public OrderItemBean(Long productId, int quantity, double price) {
+        this.productId = productId;
         this.quantity = quantity;
         this.price = price;
     }
     public OrderItemBean(){}
+
+    public Long getProductId() {
+        return productId;
+    }
+
+    public void setProductId(Long productId) {
+        this.productId = productId;
+    }
 
     public Long getId() {
         return id;
@@ -40,6 +56,7 @@ public class OrderItemBean {
     public String toString() {
         return "OrderItemBean{" +
                 "id=" + id +
+                ", productId=" + productId +
                 ", quantity=" + quantity +
                 ", price=" + price +
                 '}';

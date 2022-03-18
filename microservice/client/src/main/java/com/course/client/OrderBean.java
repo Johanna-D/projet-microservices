@@ -1,20 +1,34 @@
 package com.course.client;
 
+import java.util.List;
+
 public class OrderBean {
     private Long id;
     private Long cartId;
     private double price;
+    private List<OrderItemBean> orderItems;
 
-    public OrderBean(Long id, Long cartId, double price) {
+    public OrderBean(Long id, Long cartId, double price, List<OrderItemBean> orderItems) {
         this.id = id;
         this.cartId = cartId;
         this.price = price;
+        this.orderItems = orderItems;
     }
+
     public OrderBean(){}
 
-    public OrderBean(Long cartId, double price){
+    public OrderBean(Long cartId, double price,  List<OrderItemBean> orderItems){
         this.cartId = cartId;
         this.price = price;
+        this.orderItems = orderItems;
+    }
+
+    public List<OrderItemBean> getOrderItems() {
+        return orderItems;
+    }
+
+    public void setOrderItems(List<OrderItemBean> orderItems) {
+        this.orderItems = orderItems;
     }
 
     public Long getId() {
@@ -47,6 +61,7 @@ public class OrderBean {
                 "id=" + id +
                 ", cartId=" + cartId +
                 ", price=" + price +
+                ", orderItems=" + orderItems +
                 '}';
     }
 }
