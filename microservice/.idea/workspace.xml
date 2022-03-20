@@ -44,10 +44,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -164,7 +164,8 @@
       <workItem from="1647467320983" duration="4212000" />
       <workItem from="1647471673648" duration="4367000" />
       <workItem from="1647526991461" duration="29884000" />
-      <workItem from="1647612783225" duration="4641000" />
+      <workItem from="1647612783225" duration="5485000" />
+      <workItem from="1647784352797" duration="2378000" />
     </task>
     <servers />
   </component>
@@ -185,21 +186,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/com/course/client/ClientController.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order/src/main/java/com/course/order/OrderController.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order/src/main/java/com/course/order/OrderController.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/order/src/main/java/com/course/order/OrderController.java</url>
           <line>23</line>

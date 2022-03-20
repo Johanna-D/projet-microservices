@@ -32,31 +32,16 @@
     </style>
 </head>
 <body>
-<script>
-
-    // Pour rediriger sur l'index si on reload depuis la page commande
-        window.addEventListener( "pageshow", function ( event ) {
-            var historyTraversal = event.persisted ||
-                ( typeof window.performance != "undefined" &&
-                    window.performance.navigation.type === performance.navigation.TYPE_RELOAD );
-            if ( historyTraversal ) {
-                // Handle page restore.
-                window.location.replace("/");
-            }
-        });
-
-
-</script>
-
-<div class="container">
-    <h1>Contenu de la commande</h1>
+<h1>Commandes passées</h1>
+<div class="container" th:each="order: ${myorders}">
+    <h1 th:text= "'ID commande : ' + ${order.id}"></h1>
     <div id="row">
-    <div th:each="item : ${myorder.orderItems}" id="product">
-        <p th:text= "'ID du produit : ' + ${item.productId} + ', Quantité : ' + ${item.quantity} + ', Prix unitaire : ' + ${item.price} "></p>
-    </div>
-    <div id="prix">
-    <p th:text= "'Prix total : ' + ${myorder.price} + ' €'"  ></p>
-    </div>
+        <div th:each="item : ${order.orderItems}" id="product">
+            <p th:text= "'ID du produit : ' + ${item.productId} + ', Quantité : ' + ${item.quantity} + ', Prix unitaire : ' + ${item.price} "></p>
+        </div>
+        <div id="prix">
+            <p th:text= "'Prix total : ' + ${order.price} + ' €'"  ></p>
+        </div>
     </div>
 
 </div>

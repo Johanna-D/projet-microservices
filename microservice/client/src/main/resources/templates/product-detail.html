@@ -6,6 +6,9 @@
         html{
             background: linear-gradient(to bottom right, cadetblue, aquamarine);
             height:100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
         h1 {
             text-align: center;
@@ -37,8 +40,6 @@
         url = "/product-detail/"+id+"/"+panierId;
         fetch(url, {method:"POST"}) // récupérer/envoyer des ressources via une API
             .then((responseJSON) => { // réponse du controller
-                // arrow functions, conserve le bon "this"
-                // la réponse est en JSON, on la convertit avec la ligne suivante
                 responseJSON.json().then((resJS) => {
                     console.log(resJS);
                     sessionStorage.setItem("panierId",resJS.id);

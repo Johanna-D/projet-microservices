@@ -35,18 +35,12 @@ public class ClientController {
         return "index";
     }
 
-    @RequestMapping("/order")
+    @RequestMapping("/orders")
     public String orderPage(Model model) {
         List<OrderBean> orderBeans = msOrderProxy.searchOrder();
-        OrderBean orderBean = null;
-        for (OrderBean order : orderBeans){
-            orderBean = order;
-        }
-//        List<OrderItemBean> orderItems = msOrderProxy.list();
 
-        model.addAttribute("myorder",orderBean);
-//        model.addAttribute("orderItems",orderItems);
-        return "order";
+        model.addAttribute("myorders",orderBeans);
+        return "orders";
     }
 
 
@@ -135,7 +129,6 @@ public class ClientController {
         msOrderProxy.createNewOrder(orderData);
 
         model.addAttribute("myorder",orderData);
-//        model.addAttribute("orderItems", orderItems);
 
         msCartProxy.deleteCart(panierIdLong);
 

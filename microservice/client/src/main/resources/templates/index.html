@@ -5,6 +5,9 @@
     <style th:inline="css">
         html{
             background: linear-gradient(to bottom right, cadetblue, aquamarine);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
         h1 {
             text-align: center;
@@ -52,7 +55,7 @@
 
 <div id="nav">
 <div id="panier" ></div>
-<div id="commande" ><a th:href="@{|/order|}">Commande</a></div>
+<div id="commande" ><a th:href="@{|/orders|}">Commande</a></div>
 </div>
     <h1>Eaux de luxe</h1>
     <div id="row">
